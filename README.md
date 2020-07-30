@@ -119,6 +119,12 @@ Actions:
 - sqs [add-permission](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/sqs/add-permission.html)
 
 
+## SES
+[Docs](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization-policies.html)
+
+Actions:
+- ses [put-identity-policy](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ses/put-identity-policy.html)
+
 # Resource that can be made public through sharing APIs
 
 ## AMI
