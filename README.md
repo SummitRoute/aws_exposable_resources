@@ -29,35 +29,35 @@ Allows invoking the function
 Actions:
 - lambda [add-permission](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/lambda/add-permission.html)
 
-# Lambda layer
+## Lambda layer
 Actions:
 - lambda [add-layer-version-permission](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/lambda/add-layer-version-permission.html)
 
 
-# Serverless Application Repository
+## Serverless Application Repository
 
 Actions:
 - serverlessrepo [put-application-policy](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/serverlessrepo/put-application-policy.html)
 
 
-# Backup
+## Backup
 [Docs](https://docs.aws.amazon.com/aws-backup/latest/devguide/creating-a-vault-access-policy.html)
 
 Actions: 
 - backup [put-backup-vault-access-policy](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/backup/put-backup-vault-access-policy.html)
 
 
-# EFS
+## EFS
 TODO: Need to confirm this can actually be shared with other accounts. Some of the doc wording leads me to think this might only be shareable to principals within an account.
 
 Actions:
 - efs [put-file-system-policy](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/efs/put-file-system-policy.html)
 
-# Glacier
+## Glacier
 Actions: 
 - glacier [set-vault-access-policy](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/glacier/set-vault-access-policy.html)
 
-# S3
+## S3
 S3 buckets can be public via policies and ACL. S3 objects can be public via ACL. ACLs can be set at bucket or object creation.
 
 Actions:
@@ -67,39 +67,36 @@ Actions:
 - s3api [put-object](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3api/put-object.html)
 - s3api [put-object-acl](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3api/put-object-acl.html)
 
-# IAM Role
+## IAM Role
 Actions:
 - iam [create-role](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/create-role.html)
 - iam [update-assume-role-policy](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/update-assume-role-policy.html)
 
-
-# KMS Keys
+## KMS Keys
 Actions:
 - kms [create-key](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/kms/create-key.html)
 - kms [create-grant](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/kms/create-grant.html)
 - kms [put-key-policy](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/kms/put-key-policy.html)
-  
 
-
-# Secrets Managers
+## Secrets Managers
 Actions:
 - secretsmanager [put-resource-policy](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/secretsmanager/put-resource-policy.html)
 
 
-# CloudWatch Logs
+## CloudWatch Logs
 Actions: 
 - logs [put-resource-policy](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/logs/put-resource-policy.html)
 - logs [put-destination-policy](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/logs/put-destination-policy.html)
 
 
-# EventBridge
-Notes: Only allows sending data into an account
+## EventBridge
+Only allows sending data into an account
 
 Actions:
 - events [put-permission](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/events/put-permission.html)
 
 
-# API Gateway
+## API Gateway
 [Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-policy-language-overview.html)
 TODO: Is there similar functionality for apigatewayv2? And is this all more a network resource?
 
@@ -108,31 +105,28 @@ Actions:
 - apigateway [update-rest-api](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/apigateway/update-rest-api.html)
 
 
-# MediaStore
+## MediaStore
 [Docs](https://docs.aws.amazon.com/mediastore/latest/ug/policies-examples-cross-acccount-full.html)
 
 Actions:
 - mediastore [put-container-policy](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/mediastore/put-container-policy.html)
 
 
-# ElasticSearch
+## ElasticSearch
 Actions: 
 - es [create-elasticsearch-domain](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/es/create-elasticsearch-domain.html)
 - es [update-elasticsearch-domain-config](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/es/update-elasticsearch-domain-config.html)
 
-# Glue
+## Glue
 Actions:
 - glue [put-resource-policy](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/glue/put-resource-policy.html)
 
-
-
-# SNS
+## SNS
 Actions:
 - sns [create-topic](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/sns/create-topic.html)
 - sns [add-permission](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/sns/add-permission.html)
 
-
-# SQS
+## SQS
 Actions:
 - sqs [create-queue](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/sqs/create-queue.html)
 - sqs [add-permission](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/sqs/add-permission.html)
