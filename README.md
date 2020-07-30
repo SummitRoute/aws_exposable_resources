@@ -132,6 +132,29 @@ Actions:
 - sqs [add-permission](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/sqs/add-permission.html)
 
 
+# Resource that can be made public through sharing APIs
+
+## AMI
+Actions:
+- ec2 [modify-image-attribute](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-image-attribute.html)
+
+# FPGA image
+Actions:
+- ec2 [modify-fpga-image-attribute](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-fpga-image-attribute.html)
+
+# EBS snapshot
+Actions:
+- ec2 [modify-snapshot-attribute](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-snapshot-attribute.html)
+
+# RDS snapshot
+Actions:
+- rds [modify-db-snapshot](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-db-snapshot.html)
+
+# RDS DB Cluster snapshot
+Actions:
+- rds [modify-db-cluster-snapshot-attribute](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-db-cluster-snapshot-attribute.html)
+
+
 
 
 
