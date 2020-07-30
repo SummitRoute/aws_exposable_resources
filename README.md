@@ -2,14 +2,9 @@
 
 The goal of this repo is to maintain a list of all AWS resources that can be publicly exposed, and eventually, those that can be shared with untrusted accounts (that section is still in development and not included here yet).
 
-A resource is viewed as can be made public if an attacker who knows about every resource in your account and how they are configured, could use this knowledge to access this resource somehow. An example of this would be if all the CloudFormation scripts for your company were leaked.
-
-A resource is viewed as can be shared if it could be shared somehow with a potentially untrusted account.  For example, CloudTrail can be configured to be sent to the S3 bucket of an unknown acccount.  The public resources can all be shared, but the shared resources are more limited in their exposure.
-
-
 The following concepts are applied in this list:
 - Resources that could be indirectly exposed through another resource are not included. For example, CloudTrail logs can be sent to an S3 bucket that is public, but it is the S3 bucket that is misconfigured, so CloudTrail is not listed as a resource that can be made public.
-- Some resources may require multiple things configured a certain way to be considered public. For example, a Secrets Manager secret that is encrypted with a KMS, would need both the Secret and KMS key to be public for access to the Secret. For the purposes of this list, I consider the Secret resource policy only.  Similarly, for Managed ElasticSearch clusters, you need both the resource policy to allow public access, and for it to have a non-VPC IP. I consider only the resource policy. For an EC2, you could create an EC2 with a public IP, but associated a restricted Security Group to it, that perhaps later is opened up to allow public access. I view the creation of the EC2, and not the modification of the Securtiy Group to be the action of interest.
+- Some resources may require multiple things configured a certain way to be considered public. For example, a Secrets Manager secret that is encrypted with a KMS, would need both the Secret and KMS key to be public for access to the Secret. For the purposes of this list, I consider the Secret resource policy only.  Similarly, for Managed ElasticSearch clusters, you need both the resource policy to allow public access, and for it to have a non-VPC IP. I consider only the resource policy. For an EC2, you could create an EC2 with a public IP, but associate a restricted Security Group to it that perhaps later is opened up to allow public access. I view the creation of the EC2 with a public IP, and not the modification of the Securtiy Group to be the action of interest.
 
 
 # Roadmap
