@@ -187,12 +187,12 @@ Actions:
 Actions:
 - globalaccelerator [create-accelerator](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/globalaccelerator/create-accelerator.html)
 
-# ELB
+## ELB
 Actions:
 - elb [create-load-balancer](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/elb/create-load-balancer.html)
 - elbv2 [create-load-balancer](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/elbv2/create-load-balancer.html)
 
-# Lightsail
+## Lightsail
 Actions:
 - lightsail [allocate-static-ip](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/lightsail/allocate-static-ip.html)
 - lightsail [create-distribution](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/lightsail/create-distribution.html)
