@@ -1,3 +1,5 @@
+# AWS Exposable Resources
+
 The goal of this repo is to maintain a list of all AWS resources that can be publicly exposed, and eventually, those that can be shared with untrusted accounts (that section is still in development and not included here yet).
 
 A resource is viewed as can be made public if an attacker who knows about every resource in your account and how they are configured, could use this knowledge to access this resource somehow. An example of this would be if all the CloudFormation scripts for your company were leaked.
@@ -15,7 +17,6 @@ I would like this repo to eventually contain the following:
 - Sample CLI commands for creating both a private and public resource
 - Associated CloudTrail logs for these two events so you can build and test monitoring solutions. For example, you can see sample CloudTrail events for StreamAlert [here](https://github.com/airbnb/streamalert/blob/master/rules/community/cloudwatch_events/cloudtrail_public_resources.json)
 - Associated Describe calls on the resources to show what it looks like when these resources are public.  For example, you can see sample json responses in CloudMapper's test data [here](https://github.com/duo-labs/cloudmapper/blob/main/account-data/demo/us-east-1/s3-get-bucket-policy/cloudmapper_demo).
-
 
 # Resources that can be made public through resource policies
 
@@ -138,25 +139,55 @@ Actions:
 Actions:
 - ec2 [modify-image-attribute](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-image-attribute.html)
 
-# FPGA image
+## FPGA image
 Actions:
 - ec2 [modify-fpga-image-attribute](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-fpga-image-attribute.html)
 
-# EBS snapshot
+## EBS snapshot
 Actions:
 - ec2 [modify-snapshot-attribute](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/modify-snapshot-attribute.html)
 
-# RDS snapshot
+## RDS snapshot
 Actions:
 - rds [modify-db-snapshot](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-db-snapshot.html)
 
-# RDS DB Cluster snapshot
+## RDS DB Cluster snapshot
 Actions:
 - rds [modify-db-cluster-snapshot-attribute](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-db-cluster-snapshot-attribute.html)
 
+# Resources that can be made public through network access
+
+## CloudFront
+Actions:
+- cloudfront [create-distribution](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudfront/create-distribution.html)
+- cloudfront [create-distribution-with-tags](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudfront/create-distribution-with-tags.html)
+
+## RDS
+Actions:
+- rds [create-db-instance](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-instance.html)
+- rds [modify-db-instance](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-db-instance.html)
+
+## EC2
+Actions:
+- ec2 [run-instances](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/run-instances.html)
+- ec2 [run-scheduled-instances](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/run-scheduled-instances.html)
+
+## Elastic IP
+Actions:
+- ec2 [allocate-address](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/allocate-address.html)
 
 
+## ECS
+Actions:
+- ecs [create-service](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ecs/create-service.html)
+- ecs [update-service](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ecs/update-service.html)
+- ecs [create-task-set](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ecs/create-task-set.html)
+- ecs [update-task-set](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ecs/update-task-set.html)
 
+## Global Accelerator
+Actions:
+- globalaccelerator [create-accelerator](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/globalaccelerator/create-accelerator.html)
 
+# ELB
 
-
+# Lightsail
