@@ -200,3 +200,15 @@ Actions:
 - lightsail [update-relational-database](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/lightsail/update-relational-database.html)
 - lightsail [create-load-balancer](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/lightsail/create-load-balancer.html)
 - lightsail [create-instances](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/lightsail/create-instances.html)
+
+## Neptune
+Actions:
+- neptune [create-db-instance](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/neptune/create-db-instance.html)
+
+## ElasticCache
+Actions:
+- elasticcache [create-cache-cluster](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/elasticache/create-cache-cluster.html)
+
+## EMR
+Actions:
+- emr [create-cluster](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/emr/create-cluster.html)
