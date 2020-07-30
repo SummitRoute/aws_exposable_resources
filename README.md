@@ -9,7 +9,7 @@ A resource is viewed as can be shared if it could be shared somehow with a poten
 
 The following concepts are applied in this list:
 - Resources that could be indirectly exposed through another resource are not included. For example, CloudTrail logs can be sent to an S3 bucket that is public, but it is the S3 bucket that is misconfigured, so CloudTrail is not listed as a resource that can be made public.
-- Some resources may require multiple things configured a certain way to be considered public. For example, a Secrets Manager secret that is encrypted with a KMS, would need both the Secret and KMS key to be public for access to the Secret. For the purposes of this list, I consider the Secret resource policy only.  Similarly, for Managed ElasticSearch clusters, you need both the resource policy to allow public access, and for it to have a non-VPC IP. I consider only the resource policy.
+- Some resources may require multiple things configured a certain way to be considered public. For example, a Secrets Manager secret that is encrypted with a KMS, would need both the Secret and KMS key to be public for access to the Secret. For the purposes of this list, I consider the Secret resource policy only.  Similarly, for Managed ElasticSearch clusters, you need both the resource policy to allow public access, and for it to have a non-VPC IP. I consider only the resource policy. For an EC2, you could create an EC2 with a public IP, but associated a restricted Security Group to it, that perhaps later is opened up to allow public access. I view the creation of the EC2, and not the modification of the Securtiy Group to be the action of interest.
 
 
 # Roadmap
@@ -97,15 +97,6 @@ Actions:
 - events [put-permission](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/events/put-permission.html)
 
 
-## API Gateway
-[Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-policy-language-overview.html)
-TODO: Is there similar functionality for apigatewayv2? And is this all more a network resource?
-
-Actions:
-- apigateway [create-rest-api](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/apigateway/create-rest-api.html)
-- apigateway [update-rest-api](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/apigateway/update-rest-api.html)
-
-
 ## MediaStore
 [Docs](https://docs.aws.amazon.com/mediastore/latest/ug/policies-examples-cross-acccount-full.html)
 
@@ -157,6 +148,15 @@ Actions:
 
 # Resources that can be made public through network access
 
+## API Gateway
+There are associated resource policies (see [here](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-policy-language-overview.html)) that may make this something that should be in multiple categories? 
+
+Actions:
+- apigateway [create-rest-api](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/apigateway/create-rest-api.html)
+- apigateway [update-rest-api](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/apigateway/update-rest-api.html)
+- apigateway [create-api](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/apigatewayv2/create-api.html)
+
+
 ## CloudFront
 Actions:
 - cloudfront [create-distribution](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudfront/create-distribution.html)
@@ -176,7 +176,6 @@ Actions:
 Actions:
 - ec2 [allocate-address](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/allocate-address.html)
 
-
 ## ECS
 Actions:
 - ecs [create-service](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ecs/create-service.html)
@@ -189,5 +188,15 @@ Actions:
 - globalaccelerator [create-accelerator](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/globalaccelerator/create-accelerator.html)
 
 # ELB
+Actions:
+- elb [create-load-balancer](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/elb/create-load-balancer.html)
+- elbv2 [create-load-balancer](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/elbv2/create-load-balancer.html)
 
 # Lightsail
+Actions:
+- lightsail [allocate-static-ip](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/lightsail/allocate-static-ip.html)
+- lightsail [create-distribution](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/lightsail/create-distribution.html)
+- lightsail [create-relational-database](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/lightsail/create-relational-database.html)
+- lightsail [update-relational-database](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/lightsail/update-relational-database.html)
+- lightsail [create-load-balancer](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/lightsail/create-load-balancer.html)
+- lightsail [create-instances](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/lightsail/create-instances.html)
