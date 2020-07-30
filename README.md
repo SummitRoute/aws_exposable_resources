@@ -12,7 +12,7 @@ The following concepts are applied in this list:
 
 # Roadmap
 I would like this repo to eventually contain the following:
-- Sample code for creating both a private and public resource
+- Sample CLI commands for creating both a private and public resource
 - Associated CloudTrail logs for these two events so you can build and test monitoring solutions. For example, you can see sample CloudTrail events for StreamAlert [here](https://github.com/airbnb/streamalert/blob/master/rules/community/cloudwatch_events/cloudtrail_public_resources.json)
 - Associated Describe calls on the resources to show what it looks like when these resources are public.  For example, you can see sample json responses in CloudMapper's test data [here](https://github.com/duo-labs/cloudmapper/blob/main/account-data/demo/us-east-1/s3-get-bucket-policy/cloudmapper_demo).
 
