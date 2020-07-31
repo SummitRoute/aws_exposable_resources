@@ -225,5 +225,3 @@ Actions:
 ## EMR
 Actions:
 - emr [create-cluster](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/emr/create-cluster.html)
-
-
