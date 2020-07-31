@@ -163,6 +163,12 @@ Actions:
 - cloudfront [create-distribution](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudfront/create-distribution.html)
 - cloudfront [create-distribution-with-tags](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudfront/create-distribution-with-tags.html)
 
+## Redshift
+Actions:
+- redshift [create-cluster](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/redshift/create-cluster.html)
+- redshift [modify-cluster](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/redshift/modify-cluster.html)
+
+
 ## RDS
 Actions:
 - rds [create-db-instance](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-instance.html)
