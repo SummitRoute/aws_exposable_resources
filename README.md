@@ -126,7 +126,7 @@ Actions:
 - ses [put-identity-policy](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ses/put-identity-policy.html)
 
 ## Route 53
-[Docs] (https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingHostedZone.html)
+[Docs](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingHostedZone.html)
 
 Actions:
 - route53 [create-hosted-zone](https://docs.aws.amazon.com/cli/latest/reference/route53/create-hosted-zone.html)
