@@ -219,3 +219,7 @@ Actions:
 ## EMR
 Actions:
 - emr [create-cluster](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/emr/create-cluster.html)
+
+## SageMaker
+Actions:
+- sagemaker [create-notebook-instance](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/sagemaker/create-notebook-instance.html)
