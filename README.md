@@ -147,6 +147,12 @@ Actions:
 Actions:
 - rds [modify-db-cluster-snapshot-attribute](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/modify-db-cluster-snapshot-attribute.html)
 
+## Systems Manager
+SSM Document owners can share ([Docs](https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-how-to-share.html)) Documents publicly ('all') or privately (specified account numbers).
+
+Actions:
+- ssm [modify-document-permission](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ssm/modify-document-permission.html)
+
 # Resources that can be made public through network access
 
 ## API Gateway
