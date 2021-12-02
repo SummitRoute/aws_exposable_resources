@@ -219,3 +219,6 @@ Actions:
 ## EMR
 Actions:
 - emr [create-cluster](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/emr/create-cluster.html)
+
+## Kafka
+- msk [update-connectivity](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/kafka/update-connectivity.html)
