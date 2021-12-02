@@ -221,6 +221,6 @@ Actions:
 - emr [create-cluster](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/emr/create-cluster.html)
 
 ## Kafka
-- msk [create-cluster](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/kafka/create-cluster.html)
-- msk [create-cluster-v2](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/kafka/create-cluster-v2.html)
-- msk [update-connectivity](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/kafka/update-connectivity.html)
+- kafka [create-cluster](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/kafka/create-cluster.html)
+- kafka [create-cluster-v2](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/kafka/create-cluster-v2.html)
+- kafka [update-connectivity](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/kafka/update-connectivity.html)
