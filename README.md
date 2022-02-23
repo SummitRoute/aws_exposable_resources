@@ -219,3 +219,13 @@ Actions:
 ## EMR
 Actions:
 - emr [create-cluster](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/emr/create-cluster.html)
+
+## Elastic Kubernetes Service (EKS)
+
+An EKS cluster is exposed to the Internet when it has a [public endpoint](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) enabled (default), and it does not [restrict ingress traffic](https://aws.amazon.com/premiumsupport/knowledge-center/eks-lock-api-access-IP-addresses/).
+
+Note that even when exposed to an untrusted network, the API server only accepts authenticated requests by default.
+
+Actions:
+- eks [create-cluster](https://docs.aws.amazon.com/cli/latest/reference/eks/create-cluster.html)
+- eks [update-cluster-config](https://docs.aws.amazon.com/cli/latest/reference/eks/update-cluster-config.html)
